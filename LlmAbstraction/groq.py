@@ -15,3 +15,6 @@ class GroqModel(Placeholder):
         resp = self.llm_model.llm.complete(chat)
         return resp
     
+    def get_model(self):
+        return self.llm_model.llm
+    

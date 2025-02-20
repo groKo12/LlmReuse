@@ -25,4 +25,4 @@ class OllamaModel(Placeholder):
         return resp
 
     def get_model(self):
-        return self.model
+        return self.llm_model.llm
