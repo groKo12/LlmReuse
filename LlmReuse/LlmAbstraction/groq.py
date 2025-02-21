@@ -11,10 +11,12 @@ class GroqModel(Placeholder):
         self.llm_model = Settings
         self.llm_model.llm = Groq(model=self.model, api_key=self.api_key)
 
+    # Query the model
     def ask_model(self, chat):
         resp = self.llm_model.llm.complete(chat)
         return resp
     
+    # Return raw instance of the model
     def get_model(self):
         return self.llm_model.llm
     
